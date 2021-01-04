@@ -6,3 +6,4 @@ class CarSpecsSerializer(serializers.ModelSerializer):
     class Meta:
         model = CarSpecs
         fields = '__all__'
+

@@ -20,10 +20,4 @@ class CarSpecsViewset(viewsets.ModelViewSet):
         car_specs = CarSpecs.objects.all()
         return car_specs
 
-    # фильтр по названию
-    def retrieve(self, request, *args, **kwargs):
-        params = kwargs
-        print(params['pk'])
-        cars = CarSpecs.objects.filter(car_brand=params['pk'])
-        serializer = CarSpecsSerializer(cars, many=True)
-        return Response(serializer.data)
+
