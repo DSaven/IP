@@ -79,7 +79,12 @@ class Customers(models.Model):
 
 class Sellers(models.Model):
     name = models.CharField(max_length=150)
-    position = models.CharField(max_length=150)
+    POSITIONS = (
+        (1, 'Position1'),
+        (2, 'Position2'),
+        (3, 'Position3'),
+    )
+    position = models.IntegerField(choices=POSITIONS)
     passport = models.CharField(max_length=150)
     phone_number = models.CharField(max_length=15)
 
