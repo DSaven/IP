@@ -48,7 +48,7 @@ class Supplies(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        return self.date
+        return self.date.strftime("%m/%d/%Y")
 
 
 class Products(models.Model):
@@ -102,4 +102,4 @@ class Accounts(models.Model):
     date = models.DateField()
 
     def __str__(self):
-        return self.product_id
+        return self.date.strftime("%m/%d/%Y")
