@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'rest_auth',
     'firstApp',
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -125,3 +126,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+IMPORT_EXPORT_USE_TRANSACTIONS = True
